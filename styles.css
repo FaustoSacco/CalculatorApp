@@ -2,37 +2,48 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: lightskyblue;
+  background-color: rgb(106, 147, 189);
   height: 100vh;
 }
 
 .calculator {
-  background-color: antiquewhite;
-  padding: 20px;
+  background-color: rgb(211, 207, 201);
+  padding: 40px;
+  border-radius: 10%;
 }
 
 .screen {
   width: 90%;
-  height: 40%;
+  height: 50px;
   margin: 10px;
   padding: 4px;
+  background-color: rgb(9, 173, 173);
+}
+
+.output {
+  font-family: "Lucida Console", "Courier New", monospace;
+  font-size: 45px;
+  position: relative;
   text-align: end;
-  background-color: aqua;
+  bottom: 5px;
 }
 
 .buttons {
   display: grid;
+  justify-content: space-between;
   width: 220px;
   grid-template-columns: auto auto auto auto;
 }
 
 button {
-  border-radius: 50px;
-  width: 25%;
-  font-size: 40px;
+  border-radius: 25px;
+  width: 90%;
+  font-size: 30px;
   margin: 4px;
 }
 
 #clear {
-  font-size: 15px;
+  font-size: 20px;
+  width: 90%;
+  height: 80%;
 }

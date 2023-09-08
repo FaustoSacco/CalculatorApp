@@ -4,13 +4,13 @@ let operator;
 let result;
 
 function handleOperatorPressed(operatorPressed) {
-  firstNumber = parseInt(output);
+  firstNumber = parseFloat(output);
   operator = operatorPressed;
   clearScreen();
 }
 
 function equal() {
-  secondNumber = parseInt(output);
+  secondNumber = parseFloat(output);
   if (operator == "+") {
     result = firstNumber + secondNumber;
   } else if (operator == "-") {
@@ -28,6 +28,10 @@ let output = "";
 document.getElementById("output").innerHTML = output;
 
 function updateOutput(number) {
+  if (result != undefined) {
+    clearScreen();
+    result = undefined;
+  }
   output = output.concat(number);
   document.getElementById("output").innerHTML = output;
 }
